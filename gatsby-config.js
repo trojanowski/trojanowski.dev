@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Daniel Trojanowski's Blog`,
+    author: `Daniel Trojanowski`,
+    description: `A GraphQL and Apollo blog by Daniel Trojanowski.`,
+    siteUrl: `https://trojanowski.dev/`,
     social: {
-      twitter: `kylemathews`,
+      github: `trojanowski`,
+      twitter: `d_trojanowski`,
     },
   },
   plugins: [
@@ -50,20 +51,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-135899153-1`,
       },
     },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
+        name: `Daniel Trojanowski's blog`,
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/profile-pic.jpg`,
       },
     },
     `gatsby-plugin-offline`,
@@ -72,6 +73,21 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-netlify",
+      options: {
+        // gatsby-plugin-netlify by default adds Referrer-Policy: same-origin
+        // here which is IMO unnecessary
+        mergeSecurityHeaders: false,
+        headers: {
+          "/*": [
+            "X-Frame-Options: DENY",
+            "X-XSS-Protection: 1; mode=block",
+            "X-Content-Type-Options: nosniff",
+          ],
+        },
       },
     },
   ],
