@@ -87,7 +87,7 @@ export default function Layout(props) {
           target="_blank"
           rel="noopener"
         >
-          twitter
+          github
         </a>
         {" • "}
         <a href={`/rss.xml`}>rss</a>
