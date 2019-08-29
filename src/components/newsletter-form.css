@@ -1,0 +1,79 @@
+/* 
+  Partially based on https://github.com/gaearon/overreacted.io/blob/efdf124152fa5cd5eae44f62e3ba73c27d4a3e38/src/components/Signup.css
+  and https://github.com/gaearon/overreacted.io/blob/efdf124152fa5cd5eae44f62e3ba73c27d4a3e38/src/components/Signup.js#L1
+*/
+
+.NewsletterForm {
+  padding: 40px;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #f9fafb;
+  border-radius: 6px;
+  box-shadow: 0 2px 15px 0 rgba(210, 214, 220, 0.5);
+}
+
+.NewsletterForm__header {
+  margin-top: 0;
+}
+
+.NewsletterForm__field {
+  margin-bottom: 20px;
+}
+
+.NewsletterForm__input {
+  width: 240px;
+  color: black;
+  background: #ffffff;
+  font-size: 15px;
+  padding: 12px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  line-height: 1.4;
+  margin: 0;
+  -webkit-transition: border-color ease-out 300ms;
+  transition: border-color ease-out 300ms;
+}
+.NewsletterForm__input:focus {
+  outline: none;
+  border-color: #007acc;
+  -webkit-transition: border-color ease 300ms;
+  transition: border-color ease 300ms;
+}
+.NewsletterForm__input::-webkit-input-placeholder {
+  color: #848585;
+}
+.NewsletterForm__input::-moz-placeholder {
+  color: #848585;
+}
+.NewsletterForm__input:-ms-input-placeholder {
+  color: #848585;
+}
+.NewsletterForm__input::placeholder {
+  color: #848585;
+}
+
+.NewsletterForm__submit {
+  padding: 12px 24px;
+  background-color: #007acc;
+
+  border: 0;
+  border-radius: 24px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+
+  transition: background-color 0.3s ease-in-out;
+}
+
+.NewsletterForm__submit:focus,
+.NewsletterForm__submit:hover {
+  background-color: #005c99;
+}
