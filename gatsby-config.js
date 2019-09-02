@@ -90,5 +90,22 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://trojanowski.dev`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.edges.map(edge => {
+            return {
+              url: site.siteMetadata.siteUrl + edge.node.path,
+            }
+          }),
+      },
+    },
   ],
 }
